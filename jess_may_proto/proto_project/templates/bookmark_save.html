@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}북마크를 저장하세요{% endblock %}
+{% block head %}북마크를 저장하세요{% endblock %}
+
+{% block content %}{% csrf_token %}
+
+    {% include 'bookmark_save_form.html' %}{% csrf_token %}
+
+{% endblock %}
+
+<!--
+<form method = "post" action="." >{% csrf_token %}
+    {{ form.as_p }}{% csrf_token %}
+    <input type = "submit" value="저장" />
+</form>
+-->
